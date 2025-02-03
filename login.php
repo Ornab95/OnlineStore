@@ -21,61 +21,43 @@ if (isset($_POST['submit'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Admin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <style>
-    /* Center the login form using flexbox */
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Set container height to 100vh for full viewport */
-    }
-
-    .login-form {
-      width: 300px; /* Adjust width as needed */
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    /* Center the login button using flexbox */
-    .form-group {
-      display: flex;
-      justify-content: center;
-    }
-
-    h3 {
-      background-color: #699BFA; /* Adjust color as desired */
-      display: inline-block; /* Ensures background applies only to content */
-      padding: 10px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  </style>
+  <title>Admin</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <div class="login-form">
-      <h3 >Sign In</h3>
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <div class="input-group form-group">
-          <input type="text" class="form-control" placeholder="Username" name="id" required>
-        </div><br>
-        <div class="input-group form-group">
-          <input type="password" class="form-control" placeholder="Password" name="password" required>
-        </div><br>
-        <div class="form-group">
-          <input type="submit" value="Login" class="btn btn-primary" name="submit">
-        </div>
-      </form>
-    </div>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+  <div class="bg-white shadow-lg rounded-lg w-full max-w-sm p-8">
+    <h3 class="text-3xl font-semibold text-center text-blue-600 mb-8">Sign In</h3>
+    
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+      
+      <!-- Username Input -->
+      <div class="mb-6">
+        <input type="text" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Username" name="id" required>
+      </div>
+
+      <!-- Password Input -->
+      <div class="mb-6">
+        <input type="password" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Password" name="password" required>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-center">
+        <button type="submit" name="submit" class="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Login</button>
+      </div>
+
+    </form>
+    <footer class="text-center text-gray-500 mt-8">
+    &copy; <?php echo date("Y"); ?> Ornab Biswass. All rights reserved.
+</footer>
+
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
 </body>
 </html>
+

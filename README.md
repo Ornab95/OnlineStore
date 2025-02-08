@@ -46,6 +46,9 @@ This is a web-based **Inventory Management System** designed to handle product p
    - Place the project folder in your local server (e.g., `htdocs` for XAMPP).
    - Start Apache and MySQL via XAMPP.
    - Open `http://localhost/inventory-management/index.php` in your browser.
+   - You should see the login page. Use the following credentials to log in:
+     - **Username:** admin
+     - **Password:** admin
 
 ## 📊 Reports
 

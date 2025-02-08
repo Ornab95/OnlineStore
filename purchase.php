@@ -18,9 +18,9 @@
         }
 
         if ($conn->query($insertsql) === TRUE) {
-            echo "New record created successfully";
+            echo "<script>alert('New record created successfully');</script>";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "<script>alert('Error: " . $sql . "<br>" . $conn->error . "');</script>";
         }
     }
 ?>
@@ -64,6 +64,10 @@
         </div>
     </form>
 </div>
+<footer class="text-center text-gray-500 mt-8">
+    &copy; <?php echo date("Y"); ?> Ornab Biswass. All rights reserved.
+</footer>
+
 
 </body>
 </html>
